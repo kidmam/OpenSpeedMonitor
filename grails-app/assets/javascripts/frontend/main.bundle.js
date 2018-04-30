@@ -17,21 +17,21 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./src/app/about/about.component.css":
+/***/ "./src/components/about/about.component.css":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/about/about.component.html":
+/***/ "./src/components/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align: center;\">\n  <h2>\n    About Component\n  </h2>\n  <p>\n  about works!\n  </p>\n</div>\n"
+module.exports = "<div style=\"text-align: center;\" class=\"card jumbotron\">\n  <h2>\n    About Component\n  </h2>\n  <p>\n  about works!\n  </p>\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/app/about/about.component.ts":
+/***/ "./src/components/about/about.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55,8 +55,8 @@ var AboutComponent = /** @class */ (function () {
     AboutComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-about',
-            template: __webpack_require__("./src/app/about/about.component.html"),
-            styles: [__webpack_require__("./src/app/about/about.component.css")]
+            template: __webpack_require__("./src/components/about/about.component.html"),
+            styles: [__webpack_require__("./src/components/about/about.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], AboutComponent);
@@ -67,14 +67,14 @@ var AboutComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/about/about.module.ts":
+/***/ "./src/components/about/about.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_component__ = __webpack_require__("./src/app/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_component__ = __webpack_require__("./src/components/about/about.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -88,14 +88,13 @@ var AboutModule = /** @class */ (function () {
     function AboutModule() {
     }
     AboutModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */]
+            ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__about_component__["a" /* AboutComponent */]
             ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
-            ],
-            providers: [],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__about_component__["a" /* AboutComponent */]]
         })
     ], AboutModule);
@@ -106,25 +105,165 @@ var AboutModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/app.component.css":
+/***/ "./src/components/extra/extra.component.css":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/app.component.html":
+/***/ "./src/components/extra/extra.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\" class=\"card jumbotron\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n"
+module.exports = "<div style=\"text-align: center;\" class=\"card jumbotron\">\n  <h2>\n    Extra Component\n  </h2>\n  <p>\n    extra works!\n  </p>\n  <h2>\n    Rest Call\n  </h2>\n  <button (click)=\"showBrowsers()\">Get Browsers</button>\n  <button (click)=\"showSystems()\">Get Browsers</button>\n</div>\n<div class=\"card\">\n  <h2 style=\"text-align: center;\">\n    Output\n  </h2>\n  {{ browsers }}\n  <hr>\n  {{ systems }}\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/app/app.component.ts":
+/***/ "./src/components/extra/extra.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtraComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extra_service__ = __webpack_require__("./src/components/extra/extra.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ExtraComponent = /** @class */ (function () {
+    function ExtraComponent(extraService) {
+        this.extraService = extraService;
+    }
+    ExtraComponent.prototype.ngOnInit = function () {
+    };
+    ExtraComponent.prototype.showBrowsers = function () {
+        var _this = this;
+        this.extraService.getBrowsers().subscribe(function (data) { return _this.browsers = JSON.stringify(data, null, 2); });
+    };
+    ExtraComponent.prototype.showSystems = function () {
+        var _this = this;
+        this.extraService.getSystems().subscribe(function (data) { return _this.systems = JSON.stringify(data, null, 2); });
+    };
+    ExtraComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'app-extra',
+            template: __webpack_require__("./src/components/extra/extra.component.html"),
+            styles: [__webpack_require__("./src/components/extra/extra.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__extra_service__["a" /* ExtraService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__extra_service__["a" /* ExtraService */]])
+    ], ExtraComponent);
+    return ExtraComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/extra/extra.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtraModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__extra_component__ = __webpack_require__("./src/components/extra/extra.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ExtraModule = /** @class */ (function () {
+    function ExtraModule() {
+    }
+    ExtraModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */]
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__extra_component__["a" /* ExtraComponent */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_1__extra_component__["a" /* ExtraComponent */]]
+        })
+    ], ExtraModule);
+    return ExtraModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/extra/extra.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtraService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ExtraService = /** @class */ (function () {
+    function ExtraService(http) {
+        this.http = http;
+    }
+    ExtraService.prototype.getBrowsers = function () {
+        return this.http.get('/rest/allBrowsers');
+    };
+    ExtraService.prototype.getSystems = function () {
+        return this.http.get('/rest/allSystems');
+    };
+    ExtraService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], ExtraService);
+    return ExtraService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/landing/landing.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/components/landing/landing.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"text-align: center;\" class=\"card jumbotron\">\n  <h2>\n    Landing Component\n  </h2>\n  <p>\n    landing works!\n  </p>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/components/landing/landing.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LandingComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -132,33 +271,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
-var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'app';
+var LandingComponent = /** @class */ (function () {
+    function LandingComponent() {
     }
-    AppComponent = __decorate([
+    LandingComponent.prototype.ngOnInit = function () {
+    };
+    LandingComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'app-root',
-            template: __webpack_require__("./src/app/app.component.html"),
-            styles: [__webpack_require__("./src/app/app.component.css")]
-        })
-    ], AppComponent);
-    return AppComponent;
+            selector: 'app-landing',
+            template: __webpack_require__("./src/components/landing/landing.component.html"),
+            styles: [__webpack_require__("./src/components/landing/landing.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LandingComponent);
+    return LandingComponent;
 }());
 
 
 
 /***/ }),
 
-/***/ "./src/app/app.module.ts":
+/***/ "./src/components/landing/landing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LandingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__landing_component__ = __webpack_require__("./src/components/landing/landing.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -168,22 +312,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = /** @class */ (function () {
-    function AppModule() {
+var LandingModule = /** @class */ (function () {
+    function LandingModule() {
     }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]
-            ],
+    LandingModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* NgModule */])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */]
             ],
-            providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__landing_component__["a" /* LandingComponent */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2__landing_component__["a" /* LandingComponent */]]
         })
-    ], AppModule);
-    return AppModule;
+    ], LandingModule);
+    return LandingModule;
 }());
 
 
@@ -213,20 +356,24 @@ var environment = {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_about_about_module__ = __webpack_require__("./src/app/about/about.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_about_about_module__ = __webpack_require__("./src/components/about/about.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_landing_landing_module__ = __webpack_require__("./src/components/landing/landing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_extra_extra_module__ = __webpack_require__("./src/components/extra/extra.module.ts");
 
 
 
 
 
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+
+if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* enableProdMode */])();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__components_about_about_module__["a" /* AboutModule */])
     .catch(function (err) { return console.log(err); });
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app_about_about_module__["a" /* AboutModule */])
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__components_landing_landing_module__["a" /* LandingModule */])
+    .catch(function (err) { return console.log(err); });
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_5__components_extra_extra_module__["a" /* ExtraModule */])
     .catch(function (err) { return console.log(err); });
 
 

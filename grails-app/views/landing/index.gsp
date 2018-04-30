@@ -86,6 +86,8 @@
 
 <app-landing></app-landing>
 
+<app-extra></app-extra>
+
 <script type=text/javascript src="<g:assetPath src='/frontend/inline.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/polyfills.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/styles.bundle.js'/>"></script>
