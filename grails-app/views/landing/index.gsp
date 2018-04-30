@@ -84,7 +84,7 @@
 
 %{-- Frontend Javascript --}%
 
-<app-root></app-root>
+<app-landing></app-landing>
 
 <script type=text/javascript src="<g:assetPath src='/frontend/inline.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/polyfills.bundle.js'/>"></script>
