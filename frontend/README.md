@@ -1,6 +1,5 @@
 Proof of Concept für neues Frontend mit Angular
 ---
-***
 Bei dem momentanen PoC werden die einzelnen Bestandteile einer Anwendung in unabhängige Module aufgeteilt.
 Diese Module können in einer beliebigen `.gsp` mit den dazugehörigen Ressourcen eingebunden werden. Innerhalb eines
 Moduls können mehrere Komponenten eingebunden werden. Jedes Modul hat folglich sein eigenes JavaScript Bundle. Einbinden kann man ein Modul durch einen simplen HTML-Tag.
@@ -19,7 +18,6 @@ Beispielsweise wird nachfolgend das Modul `landing` in `index.gsp` eingebunden.
 </body>
 ```
 ### Ordnerstruktur
----
 Die Ordnerstruktur ist noch zu verändern. Zum Testen wurde momentan folgende Ordnerstruktur aufgesetzt.
 ```
 frontend
@@ -77,7 +75,6 @@ frontend
 └── webpack.config.js
 ```
 ### Aufbau der Dateien
----
 Der Aufbau der Dateien kann über die Struktur von *Landing* nachverfolgt werden.
 `landing.ts` ist als Einstiegspunkt für Webpack allein dafür zuständig, das zugehörige Modul `landing.module.ts` einzubinden.
 ```typescript
@@ -133,11 +130,37 @@ export class LandingComponent implements OnInit {
 }
 ```
 ### Webpack
----
 In `webpack.config.js`wird konfiguriert, wie die Application gebaut wird. Hier werden die gewünschten Module hinzugefügt. Die oben genannten Einstiegspunkte werden in `module.exports` unter dem Punkt `entry` hinzugefügt. So wird für jedes eigenständiges Modul ein eigenes JavaScript Bundle ausgeliefert, welches an gegebener Stelle eingebunden werden kann.
 Unter dem Punkt `plugins` können die einzubindenden Module dem `vendor` CommonsChunkPlugin zugewiesen werden, damit die sich überschneidenden Dateien nicht doppelt ausgeliefert werden.
 ```typescript
 // webpack.config.js
+# Frontend
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 module.exports = {
     ...
@@ -179,5 +202,4 @@ module.exports = {
 }
 ```
 ### Building
----
 Gebaut wird das Projektaus dem `frontend` Ordner heraus mit `npm run build`.
