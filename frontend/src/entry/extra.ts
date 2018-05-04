@@ -2,9 +2,9 @@ import { enableProdMode } from '@angular/core';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { environment } from "./environments/environment";
+import { environment } from "../environments/environment";
 
-import { ExtraModule } from "./components/extra/extra.module";
+import { ExtraModule } from "../app/extra/extra.module";
 
 if (environment.production) {
   enableProdMode();

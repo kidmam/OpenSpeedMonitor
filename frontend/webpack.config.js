@@ -11,9 +11,8 @@ const postcssImports = require('postcss-import');
 
 const { NoEmitOnErrorsPlugin, SourceMapDevToolPlugin, NamedModulesPlugin } = require('webpack');
 const { NamedLazyChunksWebpackPlugin, BaseHrefWebpackPlugin, PostcssCliResources } = require('@angular/cli/plugins/webpack');
-const { CommonsChunkPlugin } = require('webpack').optimize;
+const { CommonsChunkPlugin, UglifyJsPlugin } = require('webpack').optimize;
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
-
 const nodeModules = path.join(process.cwd(), 'node_modules');
 const realNodeModules = fs.realpathSync(nodeModules);
 const genDirNodeModules = path.join(process.cwd(), 'src', '$$_gendir', 'node_modules');
@@ -145,10 +144,10 @@ module.exports = {
   },
   "entry": {
     "landing": [
-      "./src/main_landing.ts"
+      "./src/entry/landing.ts"
     ],
     "extra": [
-      "./src/main_extra.ts"
+      "./src/entry/extra.ts"
     ],
     "polyfills": [
       "./src/polyfills.ts"
@@ -390,6 +389,7 @@ module.exports = {
     ]
   },
   "plugins": [
+    new UglifyJsPlugin(),
     new NoEmitOnErrorsPlugin(),
     new CopyWebpackPlugin([
       {
@@ -472,7 +472,8 @@ module.exports = {
       "chunks": [
         "main",
         "extra",
-        "landing"
+        "landing",
+        "about"
       ]
     }),
     new SourceMapDevToolPlugin({
