@@ -14,7 +14,7 @@ Beispielsweise wird nachfolgend das Modul `landing` in `index.gsp` eingebunden.
 <script type=text/javascript src="<g:assetPath src='/frontend/polyfills.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/styles.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/vendor.bundle.js'/>"></script>
-<script type=text/javascript src="<g:assetPath src='/frontend/landing.bundle.js'/>"></script (Jeweils zugehöriges Bundle zum benutzen Modul)
+<script type=text/javascript src="<g:assetPath src='/frontend/landing.bundle.js'/>"></script> (Jeweils zugehöriges Bundle zum benutzen Modul)
 </body>
 ```
 ### Ordnerstruktur
