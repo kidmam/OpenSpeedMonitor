@@ -149,6 +149,9 @@ module.exports = {
     "extra": [
       "./src/entry/extra.ts"
     ],
+    "about": [
+      "./src/entry/about.ts"
+    ],
     "polyfills": [
       "./src/polyfills.ts"
     ],

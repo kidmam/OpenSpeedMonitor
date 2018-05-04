@@ -51,7 +51,7 @@
             <h2><g:message code="customerSatisfation.label" default="Customer Satisfaction"/> <i class="fa fa-users"></i></h2>
             <img src="${resource(dir: 'images', file: 'csi.png')}"
                  alt="CSI Graph" class="intro-img img-rounded"/>
-            <div class="intro-text">
+            <div class="intro-text">WW
                 <p>
                     <g:message code="landing.csi.text"
                        default="Show how satisfied customers would be with the performance of your web application. Compare the {0} (CSI) of your application with others."

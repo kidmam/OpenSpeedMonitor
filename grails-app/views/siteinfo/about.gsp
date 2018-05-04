@@ -75,13 +75,13 @@
 	</div>
 </div>
 
-<app-extra></app-extra>
+<app-about></app-about>
 
 <script type=text/javascript src="<g:assetPath src='/frontend/inline.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/polyfills.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/styles.bundle.js'/>"></script>
 <script type=text/javascript src="<g:assetPath src='/frontend/vendor.bundle.js'/>"></script>
-<script type=text/javascript src="<g:assetPath src='/frontend/extra.bundle.js'/>"></script>
+<script type=text/javascript src="<g:assetPath src='/frontend/about.bundle.js'/>"></script>
 </body>
 
 </html>

@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
 
-import { AboutComponent } from "./about.component";
+import { LandingComponent } from "../components/landing/landing.component";
 
 @NgModule({
   imports: [
     BrowserModule
   ],
   declarations: [
-    AboutComponent
+    LandingComponent
   ],
-  bootstrap: [AboutComponent]
+  bootstrap: [LandingComponent]
+
 })
-export class AboutModule { }
+
+export class LandingModule { }
