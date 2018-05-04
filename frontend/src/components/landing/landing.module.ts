@@ -13,4 +13,5 @@ import { LandingComponent } from "./landing.component";
   bootstrap: [LandingComponent]
 
 })
+
 export class LandingModule { }
